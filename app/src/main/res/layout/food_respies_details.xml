@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:weightSum="100"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:background="@color/detailscreen_bar"
+                android:orientation="vertical"
+                android:layout_weight="70"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar_notification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    app:contentInsetLeft="0dp"
+                    app:contentInsetStart="0dp"
+                    app:contentInsetStartWithNavigation="0dp"
+                    app:title=""
+                    >
+
+                </androidx.appcompat.widget.Toolbar>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:background="#fff"
+                android:orientation="vertical"
+                android:layout_weight="30"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:weightSum="100"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_weight="78"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/iv_display_images"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_breakfast"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerInside"
+                        />
+
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_weight="22"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardUseCompatPadding="true"
+                        app:cardElevation="3dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_gravity="center"
+                        android:background="#FFF"
+                        android:backgroundTint="#FFF"
+                        app:cardCornerRadius="6dp" >
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:weightSum="100"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                               android:layout_weight="30"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <LinearLayout
+                                    android:padding="20dp"
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/tv_recp_title"
+                                        android:text="Blue Slad"
+                                        android:textColor="#000"
+                                        android:textSize="16sp"
+                                        android:fontFamily="@font/productsansregular"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"/>
+
+                                    <TextView
+                                        android:visibility="gone"
+                                        android:id="@+id/tv_recp_total_time"
+                                        android:layout_marginTop="5dp"
+                                        android:text="15 Minutes"
+                                        android:textColor="#525252"
+                                        android:textSize="12sp"
+                                        android:fontFamily="@font/productsansregular"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_recp_cook_time"
+                                        android:layout_marginTop="5dp"
+                                        android:text="15 Minutes"
+                                        android:textColor="#525252"
+                                        android:textSize="12sp"
+                                        android:fontFamily="@font/productsansregular"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"/>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_weight="70"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:src="@drawable/ic_unfavourite"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                </ImageView>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tabLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="horizontal"
+                        app:tabIndicatorColor="@color/highlight_colors"
+                        app:tabIndicatorHeight="1dp"
+                        app:tabSelectedTextColor="#000"
+                        app:tabGravity="fill"
+                        app:tabTextColor="#525252"
+                        app:tabTextAppearance="@style/TabLayoutTextAppearance" />
+
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/vpHome"
+                        android:layout_above="@+id/ll_bottom_menu"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                        />
+
+
+                </LinearLayout>
+
+
+
+
+
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+    </FrameLayout>
+
+
+
+</LinearLayout>
